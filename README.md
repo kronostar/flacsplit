@@ -1,4 +1,6 @@
 flacsplit
 =========
 
-A perl script to split a flac using a cue sheet into other formats/individual tracks
+Split out individual tracks from a flac encoded CD image              Requires a cue sheet for the CD
+Files written to artist/album/track in current directory
+

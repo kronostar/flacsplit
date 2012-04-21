@@ -1,0 +1,52 @@
+2011-04-01  Steve Martin  <steve@brian.roundabout.net>
+
+	* flacsplit.pl (EncodeOgg): now quality 10, bumped to version 1.6
+
+2011-03-31  Steve Martin  <steve@brian.roundabout.net>
+
+	* flacsplit.pl (EncodeMp3): changed to -V0 --vbr-new -q0 --lowpass 20 -b 96
+	Bumped version to 1.5 and added 2011 copyright
+
+2011-03-26  Steve Martin  <steve@brian.roundabout.net>
+
+	* flacsplit.pl (EncodeMp3): added -q0 for highest quality encoding
+
+2009-05-09  steve  <steve@brian>
+
+	* project added to SVN, keywords activated
+
+2008-05-23  steve  <steve@brian>
+
+	* flacsplit.pl: enhanced FixName() to cover the 7 standard reserved tokens
+	which should not occur in a filename.
+	bumped to 1.4
+
+2008-05-17  steve  <steve@brian>
+
+	* flacsplit.pl: added FixName() for really system friendly filenames
+	general fix to output directory names using FixName
+	changed Header to Id
+	added RELEASE variable for Greetings() version tracking
+	added --force option, the default is now NOT to overwrite existing music files
+	UNLESS --force is specified
+	Release bumped to 1.2
+	Added -h, --help option
+	Release bumped tp 1.3
+
+2008-05-15  steve  <steve@brian>
+
+	* flacsplit.pl: Added CreateFileName() for system friendly filenames
+	Adjusted EncodeMp3 to use system() for lame call
+	Added CheckTools() to ensure correct tools are installed
+	Added Greetings()
+	Added -v, --version option
+
+2008-05-04  steve  <steve@brian>
+
+	* flacsplit.pl: ExtractTrack() - fixed incorrect track indexing
+	Added --flac and --ogg options
+	Added EncodeOgg subroutine
+	Added --mp3 option
+	Added EncodeMp3 subroutine
+	ProcessCueSheet() - fixed incorrect genre extraction
+	Made music file naming equivalent to iTunes
