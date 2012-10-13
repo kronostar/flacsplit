@@ -1,5 +1,4 @@
 #!/usr/bin/perl
-# $Id$
 ################################################################################
 #  Script name : flacsplit.pl                                                  #
 #  System      : Unix                                                          #
@@ -20,8 +19,7 @@
 #                    --force    Overwrite existing output files                #
 #  Executed by : Command line                                                  #
 #                                                                              #
-# $Revision$                                                            #
-# Copyright (C) 2008,2011 Steve Martin                                         #
+# Copyright (C) 2008,2012 Steve Martin                                         #
 #                                                                              #
 # This program is free software; you can redistribute it and/or modify         #
 # it under the terms of the GNU General Public License as published by         #
@@ -47,7 +45,7 @@ use POSIX qw(tmpnam);
 ###############################################################################
 # main                                                                        #
 ###############################################################################
-my $RELEASE = "1.6";
+my $RELEASE = "1.7";
 
 my ( $flac, $ogg, $mp3, $version, $help, $force );
 GetOptions(
@@ -399,6 +397,7 @@ sub FixName {
     $name =~ s/-[-]+/-/g;
     $name =~ s/\.$/_/g;
     $name =~ s/[\?*:|<>]/_/g;
+    $name =~ s/[[:^print:]]/_/g;
     $name =~ s/_[_]+/_/g;
     
     return $name;
