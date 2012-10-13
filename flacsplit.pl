@@ -99,7 +99,7 @@ RemoveCueSheet();
 ###############################################################################
 
 sub Greetings {
-    print "flacsplit.pl Version $RELEASE, Copyright (C) 2008, 2011 Steve Martin\n";
+    print "flacsplit.pl Version $RELEASE, Copyright (C) 2008, 2012 Steve Martin\n";
     print "flacsplit.pl is free software; you can redistribute it and/or modify\n";
     print "it under the terms of the GNU General Public License as published by\n";
     print " the Free Software Foundation; either version 2 of the License, or\n";
