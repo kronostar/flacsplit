@@ -19,7 +19,7 @@
 #                    --force    Overwrite existing output files                #
 #  Executed by : Command line                                                  #
 #                                                                              #
-# Copyright (C) 2008,2012 Steve Martin                                         #
+# Copyright (C) 2008,2012,2017 Steve Martin                                    #
 #                                                                              #
 # This program is free software; you can redistribute it and/or modify         #
 # it under the terms of the GNU General Public License as published by         #
@@ -45,7 +45,7 @@ use POSIX qw(tmpnam);
 ###############################################################################
 # main                                                                        #
 ###############################################################################
-my $RELEASE = "1.7";
+my $RELEASE = "1.8";
 
 my ( $flac, $ogg, $mp3, $version, $help, $force );
 GetOptions(
@@ -99,7 +99,7 @@ RemoveCueSheet();
 ###############################################################################
 
 sub Greetings {
-    print "flacsplit.pl Version $RELEASE, Copyright (C) 2008, 2012 Steve Martin\n";
+    print "flacsplit.pl Version $RELEASE, Copyright (C) 2008, 2012, 2017 Steve Martin\n";
     print "flacsplit.pl is free software; you can redistribute it and/or modify\n";
     print "it under the terms of the GNU General Public License as published by\n";
     print " the Free Software Foundation; either version 2 of the License, or\n";
@@ -396,6 +396,7 @@ sub FixName {
     $name =~ s|\/|-|g;
     $name =~ s/-[-]+/-/g;
     $name =~ s/\.$/_/g;
+    $name =~ s/\./_/g;
     $name =~ s/[\?*:|<>]/_/g;
     $name =~ s/[[:^print:]]/_/g;
     $name =~ s/_[_]+/_/g;
