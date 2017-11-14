@@ -45,7 +45,7 @@ use POSIX qw(tmpnam);
 ###############################################################################
 # main                                                                        #
 ###############################################################################
-my $RELEASE = "1.8";
+my $RELEASE = "1.9";
 
 my ( $flac, $ogg, $mp3, $version, $help, $force );
 GetOptions(
@@ -300,11 +300,12 @@ sub ProcessCueSheet {
 
 sub CreateFileName {
     my ( $tracknum, $album, $track, $artist, $ext ) = @_;
-    my $name = "$tracknum $track.$ext";
+    my $name = "$tracknum $track";
 
     $artist = FixName($artist);
     $album  = FixName($album);
     $name   = FixName($name);
+    $name   = "$name.$ext";
     
     return "$artist/$album/$name";
 }
@@ -396,7 +397,7 @@ sub FixName {
     $name =~ s|\/|-|g;
     $name =~ s/-[-]+/-/g;
     $name =~ s/\.$/_/g;
-    $name =~ s/\./_/g;
+    $name =~ s/\.[\.]+/_/g;
     $name =~ s/[\?*:|<>]/_/g;
     $name =~ s/[[:^print:]]/_/g;
     $name =~ s/_[_]+/_/g;
