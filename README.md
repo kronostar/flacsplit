@@ -1,5 +1,4 @@
-flacsplit
-=========
+﻿# flacsplit
 
 Perl script to split out individual tracks from a flac encoded CD image.  
 Supports output in flac, ogg and mp3.  
