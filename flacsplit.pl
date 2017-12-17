@@ -45,7 +45,7 @@ use POSIX qw(tmpnam);
 ###############################################################################
 # main                                                                        #
 ###############################################################################
-my $RELEASE = "1.10";
+my $RELEASE = "1.11";
 
 my ( $flac, $ogg, $mp3, $version, $help, $force );
 GetOptions(
@@ -369,10 +369,6 @@ sub EncodeMp3 {
     system(
 	"lame",
 	"-V", "0",
-	"--vbr-new",
-	"-b", "96",
-	"-q", "0",
-	"--lowpass", "20",
 	"--quiet", "--noreplaygain", "--ignore-tag-errors",
 	"--ta", $artist,
 	"--tl",	$album,

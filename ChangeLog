@@ -1,3 +1,7 @@
+2017-12-17 Steve Martin  <kronostar.st4@gmail.com>
+	* flacsplit.pl (EncodeMp3): changed to new simpler format -V0
+	* : release bumped to 1.11
+
 2017-11-15  Steve Martin  <kronostar.st4@gmail.com>
 	*  flacsplit.pl (FixName): removed fix for multiple '.'
 	* : release bumped to 1.10
@@ -9,11 +13,11 @@
 2017-11-13  Steve Martin  <kronostar.st4@gmail.com>
 	*  flacsplit.pl (FixName): added fix for multiple '.'
 	* : release bumped to 1.8, added 2017 copyright
-	
+
 2012-10-13  Steve Martin  <kronostar.st4@gmail.com>
 	* flacsplit.pl (FixName): added fix for more unprintable characters
 	* : release bumped to 1.7, added 2012 copyright
-	
+
 2011-04-01  Steve Martin  <steve@brian.roundabout.net>
 
 	* flacsplit.pl (EncodeOgg): now quality 10, bumped to version 1.6
