@@ -1,3 +1,7 @@
+2020-11-11 Steve Martin  <kronostar.st4@gmail.com>
+	* flacsplit.pl: POSIX tmpnam replaced with File::Temp
+	* : release bumped to 1.12
+
 2017-12-17 Steve Martin  <kronostar.st4@gmail.com>
 	* flacsplit.pl (EncodeMp3): changed to new simpler format -V0
 	* : release bumped to 1.11
