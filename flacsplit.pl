@@ -19,7 +19,7 @@
 #                    --force    Overwrite existing output files                #
 #  Executed by : Command line                                                  #
 #                                                                              #
-# Copyright (C) 2008,2012,2017,2020 Steve Martin                               #
+# Copyright (C) 2008,2012,2017,2020,2021 Steve Martin                          #
 #                                                                              #
 # This program is free software; you can redistribute it and/or modify         #
 # it under the terms of the GNU General Public License as published by         #
@@ -45,7 +45,7 @@ use File::Temp qw(tmpnam);
 ###############################################################################
 # main                                                                        #
 ###############################################################################
-my $RELEASE = "1.12";
+my $RELEASE = "1.13";
 
 my ( $flac, $ogg, $mp3, $version, $help, $force );
 GetOptions(
@@ -393,6 +393,7 @@ sub FixName {
     $name =~ s|\/|-|g;
     $name =~ s/-[-]+/-/g;
     $name =~ s/\.$/_/g;
+    $name =~ s/^\.[\.]*/_/g;
     $name =~ s/[\?*:|<>]/_/g;
     $name =~ s/[[:^print:]]/_/g;
     $name =~ s/_[_]+/_/g;

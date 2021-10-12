@@ -1,3 +1,7 @@
+2021-10-12 Steve Martin  <kronostar.st4@gmail.com>
+	* flacsplit.pl: FixName updated to avoid filenames beginning with '.'
+	* : release bumped to 1.13
+	
 2020-11-11 Steve Martin  <kronostar.st4@gmail.com>
 	* flacsplit.pl: POSIX tmpnam replaced with File::Temp
 	* : release bumped to 1.12
